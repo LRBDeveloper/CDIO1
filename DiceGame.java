@@ -21,7 +21,10 @@ class DiceGame{
                 var userInput = s.nextLine();
                 if(userInput.equals("T")){
                     System.out.println("\nDice rolled!\n");
-                    
+                    var diceroll1 = Dice.RollDice();
+                    var diceroll2 = Dice.RollDice();
+                    System.out.println("Roll 1: " + diceroll1 + " roll 2: " + diceroll2);
+
                     if(PlayerTurn==1){
                         p1Points+=5; // Add points to player 1
 
