@@ -24,15 +24,34 @@ class DiceGame{
                     var diceroll1 = Dice.RollDice();
                     var diceroll2 = Dice.RollDice();
                     System.out.println("Roll 1: " + diceroll1 + " roll 2: " + diceroll2);
+                    
 
                     if(PlayerTurn==1){
-                        p1Points+=5; // Add points to player 1
+                        
+                        if(ens.getEns(diceroll1, diceroll2)){
+                            if (ens.checkForOne(diceroll1, diceroll2)){
+                                p1Points = 0;
+                            }else{
+                                p1Points+=5;
+                            }
+                        }else{
+                            p1Points+=diceroll1+diceroll2; // Add points to player 1
+                            PlayerTurn=2; //Switch player turn for next round
+                        }
 
-                        PlayerTurn=2; //Switch player turn for next round
+
                     }else{
-                        p2Points+=5; // Add points to player 2
-
-                        PlayerTurn=1; //Switch player turn for next round
+                        if(ens.getEns(diceroll1, diceroll2)){
+                            if (ens.checkForOne(diceroll1, diceroll2)){
+                                p2Points = 0;
+                            }else{
+                                p2Points+=diceroll1+diceroll2;
+                            }
+                        }else{
+                            p2Points+=5; // Add points to player 1
+                            PlayerTurn=1; //Switch player turn for next round
+                        }
+    
                     }
 
                     //Print current points
