@@ -19,7 +19,7 @@ class DiceGame{
             
             while(s.hasNextLine()){
                 var userInput = s.nextLine();
-                if(userInput.equals("T")){
+                if(userInput.equalsIgnoreCase("T")){
                     System.out.println("\nDice rolled!\n");
                     var diceroll1 = Dice.RollDice();
                     var diceroll2 = Dice.RollDice();
