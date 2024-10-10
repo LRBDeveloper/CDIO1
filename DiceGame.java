@@ -32,16 +32,18 @@ class DiceGame{
                             if (ens.checkForOne(diceroll1, diceroll2)){
                                 p1Points = 0;
                             }else{
-                                if(p1Points + Sum.GetSum(diceroll1, diceroll2) <=40 ){ //
-                                    p1Points+= Sum.GetSum(diceroll1, diceroll2);
+                                if(p1Points + Sum.GetSum(diceroll1, diceroll2) <= 40 ){ //
+                                    p1Points+= Sum.GetSum(diceroll1, diceroll2);                                
                                 }
+                                 }else if (p1Points + Sum.GetSum(diceroll1, diceroll2) == 40){
+                                    System.out.println("Player 1 has won!");
                             }
                         }else{
-                            if(p1Points + Sum.GetSum(diceroll1, diceroll2) <=40 ){ 
-                                p1Points += Sum.GetSum(diceroll1, diceroll2);
-                            }
-                            PlayerTurn=2;//Switch player turn for next round
+                            if(p1Points + Sum.GetSum(diceroll1, diceroll2) <= 40 ){ 
+                                p1Points += Sum.GetSum(diceroll1, diceroll2);                           
                         }
+                        PlayerTurn=2;//Switch player turn for next round
+                        
                     }else{
                         if(ens.getEns(diceroll1, diceroll2)){
                             if (ens.checkForOne(diceroll1, diceroll2)){
@@ -49,14 +51,16 @@ class DiceGame{
 
                             
                             }else{
-                                if(p2Points + Sum.GetSum(diceroll1, diceroll2) <=40 ){ //
+                                if(p2Points + Sum.GetSum(diceroll1, diceroll2) <= 40 ){ //
                                 p2Points += Sum.GetSum(diceroll1, diceroll2);
+                                }else if (p2Points + Sum.GetSum(diceroll1, diceroll2) == 40){
+                                    System.out.println("Player 2 has won!");
                                 }
                             }
 
                         }else{
-                             if(p2Points+Sum.GetSum(diceroll1, diceroll2) <=40 ){ //
-                            p2Points+= Sum.GetSum(diceroll1, diceroll2); // Add points to player 1
+                             if(p2Points + Sum.GetSum(diceroll1, diceroll2) <= 40 ){ //
+                            p2Points += Sum.GetSum(diceroll1, diceroll2); // Add points to player 1
                             
                         }
                         PlayerTurn=1; //Switch player turn for next round
@@ -75,15 +79,7 @@ class DiceGame{
                 }   
             }
 
-            if(p1Points == 40 || p2Points == 40){
-                if(p1Points==40){
-                    System.out.println("Player 1 won");
-                }
-                else{
-                    System.out.println("Player 2 won");
-                }
-                gameFinished=true;
-            }
+ 
 
         }
                         
