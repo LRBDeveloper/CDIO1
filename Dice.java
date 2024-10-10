@@ -5,8 +5,6 @@ class Dice {
         
         int terning = (int) (Math.random() * 6 + 1);
 
-        System.out.println(terning);
-
         return terning;
 
     }
