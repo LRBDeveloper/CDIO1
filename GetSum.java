@@ -1,8 +1,9 @@
 class Sum {
-    static int GetSum (int x, int y){ 
+    static int GetSum (int x, int y){
 
-        int finalsum =  + y; 
+        int finalsum = x + y; 
 
         return finalsum; 
     }
+
 }
