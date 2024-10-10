@@ -1,3 +1,5 @@
+package Spil;
+
 class ens{
     static boolean getEns(int dice1, int dice2){
         return(dice1 == dice2);

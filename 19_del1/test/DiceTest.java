@@ -1,7 +1,8 @@
-
+package test;
+import Spil.Dice;
 
 public class DiceTest {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
     
         int numRolls = 1000; // Antal kast
@@ -10,9 +11,10 @@ public class DiceTest {
 
         var DiceFaceTimes = new int [6];
 
+
         // throws the dice 1000 times
         for (int i = 0; i < numRolls; i++) {
-            int roll = Dice.RollDice();
+            int roll = Spil.Dice.RollDice();
             counts[i] = roll;
         }
 

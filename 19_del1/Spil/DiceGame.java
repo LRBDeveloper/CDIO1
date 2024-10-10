@@ -1,5 +1,6 @@
-import java.util.Scanner;
+package Spil;
 
+import java.util.Scanner;
 class DiceGame{
     public static void main(String[] args){
         var s = new Scanner(System.in);
@@ -67,7 +68,7 @@ class DiceGame{
                     }else{ //player 2's turn
                         if(ens.getEns(diceroll1, diceroll2)){
                             if (ens.checkForOne(diceroll1, diceroll2)){
-                                System.out.println("Player one hit a double 1, this resets his score");
+                                System.out.println("Player two hit a double 1, this resets his score");
                                 p2Points = 0;
                             }else{
 
@@ -76,7 +77,7 @@ class DiceGame{
                                     if(p2HitSixOnce==true){
                                         //Anden gang
                                         gameFinished=true;
-                                        System.out.println("Player one hit double 6 twice! Player one wins.");
+                                        System.out.println("Player two hit double 6 twice! Player two wins.");
                                     }else{
                                         //Første gang
                                         p2HitSixOnce=true;

@@ -1,3 +1,5 @@
+package Spil;
+
 class Sum {
     static int GetSum (int x, int y){
 

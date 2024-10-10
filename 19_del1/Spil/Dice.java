@@ -1,5 +1,7 @@
-class Dice {
-    static int RollDice() {
+package Spil;
+
+public class Dice {
+    public static int RollDice() {
         var input = new java.util.Scanner(System.in);
         input.useLocale(java.util.Locale.ENGLISH);
         
