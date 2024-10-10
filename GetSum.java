@@ -1,5 +1,5 @@
 class GetSum {
-    static int dice (int x, int y){ 
+    static int dice (int diceroll1, int diceroll2){ 
 
         int finalsum = x + y; 
 
