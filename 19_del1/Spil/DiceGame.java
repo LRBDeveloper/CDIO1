@@ -14,7 +14,7 @@ class DiceGame{
 
         boolean gameFinished = false;
 
-        System.out.println("\nWelcome to DiceGame\n\n-- Rules: --\n1.The first player to hit 40 points, wins");
+        System.out.println("\nWelcome to DiceGame\n\n-- Rules: --\n1.The aim of the game is to hit exactly 40 points, --\nAfter hitting the 40 points, the player has to hit a double to win the game. --\nIf a player rolls double 1's, the players' point score resets to 0. --\nIf a player hits a double before hitting 40 points, the player gets an extra turn. --\nIf a player hits a double 6 twice in a row, it is an automatic win. --\nNote: (A player can't hit 38 or 39, because the final point score must be exactly 40.)");
 
         while(!gameFinished){
             System.out.println("");
