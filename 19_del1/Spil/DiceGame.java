@@ -14,7 +14,7 @@ class DiceGame{
 
         boolean gameFinished = false;
 
-        System.out.println("\nWelcome to DiceGame\n\n-- Rules: --\n1. The first player to hit 40 points, wins");
+        System.out.println("\nWelcome to DiceGame\n\n-- Rules: --\n1.The first player to hit 40 points, wins");
 
         while(!gameFinished){
             System.out.println("");
